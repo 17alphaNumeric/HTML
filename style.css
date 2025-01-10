@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0, #ff6f61);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heart Animation Background */
+.heart-bg::before,
+.heart-bg::after {
+    content: "❤️";
+    position: absolute;
+    font-size: 3rem;
+    animation: float 5s infinite ease-in-out;
+    opacity: 0.4;
+}
+
+.heart-bg::before {
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.heart-bg::after {
+    bottom: 15%;
+    right: 20%;
+    animation-delay: 2.5s;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Title and Text Styling */
+h1 {
+    font-size: 2.8rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #ffafbd;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ff6f61;
+    margin: 20px 0;
+}
+
+/* Button Container Styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.yes-button {
+    background-color: #ff6f61;
+    color: white;
+}
+
+.no-button {
+    background-color: #ddd;
+    color: #555;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(1.05);
+}
+
+/* Back Button Styling */
+.back-button {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ffafbd;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-button:active {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
